@@ -52,6 +52,17 @@ $ bounting 作品.sb3 全面战争模拟器.cdc 新的作品.bcm4
 
 Scratch 工程还会输出每个角色/舞台的分组明细表；影子积木（输入占位）单独标注，不重复计入总量。
 
+## 配套油猴脚本：TurboWarp 影子积木显现
+
+[`userscript/bounting-shadow-revealer.user.js`](userscript/bounting-shadow-revealer.user.js) 是一个针对 [TurboWarp](https://turbowarp.org) 编辑器的 Tampermonkey 脚本：
+
+- 以 **45% 半透明**显现工作区里所有影子/输入积木（悬停加深），只调透明度，保持原版编辑器风格；
+- **拖动**显现出的影子积木即可拽出变成实体积木（Blockly 原生拖拽手感，原输入槽自动重生默认影子）；
+- 单击不拖仍是原版行为：数字/文本框正常输入、下拉框正常展开；`Alt+点击` 立即拽出；
+- 底部胶囊按钮或 `Alt+S` 开关，状态记忆在 localStorage。
+
+安装：浏览器安装 Tampermonkey → 新建脚本 → 粘贴该文件全部内容 → 打开 <https://turbowarp.org/editor>。
+
 ## 统计口径
 
 - **积木**：实体积木数（Scratch/Kitten 排除影子积木；扣叮统计 `<block` 标签）。
