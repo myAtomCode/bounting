@@ -1,0 +1,19 @@
+[package]
+name = "bounting"
+version = "0.1.1"
+edition = "2021"
+description = "快速统计 Scratch(.sb3) / 腾讯扣叮(.cdc) / Kitten(.bcm4) 工程的积木、造型、音频数量（分组统计仅限 Scratch）"
+readme = "README.md"
+license = "MIT"
+keywords = ["scratch", "sb3", "kitten", "cdc", "blocks"]
+categories = ["command-line-utilities"]
+repository = "https://github.com/myAtomCode/bounting"
+
+[dependencies]
+serde_json = "1.0.151"
+zip = { version = "2.4.2", default-features = false, features = ["deflate"] }
+anyhow = "1.0.104"
+
+[profile.release]
+lto = true
+strip = true
